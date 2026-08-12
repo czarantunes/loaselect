@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0a90dd"/><text x="100" y="118" font-size="90" text-anchor="middle" fill="#fff" font-family="sans-serif">*</text></svg></template>
+<title>LOA* Select — Produtos Apple</title>
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;letter-spacing:-.01em}
+  a{color:#0a90dd;text-decoration:none}
+  a:hover{color:#0567bb}
+  ::selection{background:#25cdf8;color:#fff}
+  .noscroll::-webkit-scrollbar{height:0;width:0;display:none}
+  .noscroll{scrollbar-width:none}
+  @keyframes loaFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+  @keyframes loaSpin{to{transform:rotate(360deg)}}
+  @keyframes waBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(10,144,221,.5)}70%{box-shadow:0 0 0 16px rgba(10,144,221,0)}100%{box-shadow:0 0 0 0 rgba(10,144,221,0)}}
+  .loa-grad{background-image:linear-gradient(135deg,#25cdf8 0%,#0a90dd 52%,#0567bb 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  @media(max-width:833px){
+    .hdr-nav{display:none !important}
+    .hdr-toggle{display:inline-flex !important}
+    .hero-grid{grid-template-columns:1fr !important;gap:10px !important}
+    .hero-visual{min-height:190px !important}
+    .hero-visual img{max-width:230px}
+    .detail-grid{grid-template-columns:1fr !important}
+    .detail-gallery{position:static !important;top:auto !important}
+    .detail-spec{grid-template-columns:104px 1fr !important;gap:12px !important}
+    .detail-main{padding-bottom:98px !important}
+    .buybar{display:flex !important}
+    .is-detail .wa-float{bottom:88px}
+  }
+</style>
+</helmet>
+<div class="{{ appClass }}" style="background:#fff;padding-top:96px">
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)">
+  <div style="max-width:1180px;margin:0 auto;padding:0 22px;height:96px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="#" onClick="{{ goHome }}" style="display:flex;align-items:center">
+      <img src="assets/logo-real2.png" alt="LOA* Select" style="height:88px;width:auto" />
+    </a>
+    <nav class="hdr-nav" style="display:flex;align-items:center;gap:30px">
+      <a href="#" onClick="{{ goLoja }}" style="color:#1d1d1f;font-size:13px;font-weight:400;opacity:.82" style-hover="opacity:1;color:#0a90dd">Loja</a>
+      <sc-for list="{{ navCats }}" as="c" hint-placeholder-count="5">
+        <a href="#" onClick="{{ c.onClick }}" style="color:#1d1d1f;font-size:13px;font-weight:400;opacity:.82" style-hover="opacity:1;color:#0a90dd">{{ c.label }}</a>
+      </sc-for>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="{{ waGeneral }}" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:#0a90dd">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.32-1.95 1.36-.53.04-1.02.24-3.45-.72-2.92-1.15-4.76-4.15-4.9-4.34-.14-.19-1.17-1.55-1.17-2.96s.74-2.1 1-2.39c.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.38-.42.51-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.89.27.14.45.21.52.33.07.12.07.69-.17 1.37z"></path></svg>
+      </a>
+      <a href="{{ instaUrl }}" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:#0a90dd">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg>
+      </a>
+      <button class="hdr-toggle" onClick="{{ toggleMenu }}" aria-label="Menu" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;border:none;background:none;color:#1d1d1f;cursor:pointer;border-radius:50%">
+        <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top:1px solid rgba(0,0,0,.08);background:rgba(255,255,255,.98);padding:6px 22px 14px">
+      <a href="#" onClick="{{ goLoja }}" style="display:block;padding:15px 4px;font-size:18px;font-weight:500;color:#1d1d1f;border-bottom:1px solid rgba(0,0,0,.07)">Loja</a>
+      <sc-for list="{{ navCats }}" as="c" hint-placeholder-count="5">
+        <a href="#" onClick="{{ c.onClick }}" style="display:block;padding:15px 4px;font-size:18px;font-weight:500;color:#1d1d1f;border-bottom:1px solid rgba(0,0,0,.07)">{{ c.label }}</a>
+      </sc-for>
+    </div>
+  </sc-if>
+</header>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<main>
+  <section style="max-width:1180px;margin:0 auto;padding:clamp(52px,8vw,104px) 22px clamp(30px,5vw,60px)">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(20px,5vw,64px);align-items:center">
+      <div>
+        <h1 style="font-size:clamp(38px,6.2vw,76px);line-height:1.03;letter-spacing:-.035em;font-weight:600;margin:0">Produtos Apple.<br /><span class="loa-grad">Curadoria exclusiva.</span></h1>
+        <p style="font-size:clamp(17px,2vw,22px);line-height:1.5;color:#1d1d1f;font-weight:500;max-width:500px;margin:22px 0 0">iPhone, MacBook, iPad, AirPods e Apple Watch com compra 100% segura e entrega garantida em todo o Brasil.</p>
+        <p style="font-size:14px;color:#6e6e73;margin:14px 0 0">🇧🇷 Envio nacional &nbsp;•&nbsp; Atendimento rápido no WhatsApp &nbsp;•&nbsp; Pagamento facilitado</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px">
+          <a href="#" onClick="{{ goLoja }}" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25cdf8 0%,#0a90dd 52%,#0567bb 100%);color:#fff;font-size:16px;font-weight:500;padding:14px 28px;border-radius:980px;box-shadow:0 8px 22px rgba(10,144,221,.3);min-height:48px">Explorar produtos <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+          <a href="{{ waGeneral }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:#0a90dd;font-size:16px;font-weight:500;padding:14px 6px">Falar no WhatsApp <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a>
+        </div>
+      </div>
+      <div class="hero-visual" style="position:relative;min-height:clamp(260px,32vw,420px);display:flex;align-items:center;justify-content:center">
+        <img src="assets/asterisk.png" alt="" aria-hidden="true" style="position:absolute;width:min(120%,540px);opacity:.09;animation:loaSpin 70s linear infinite;pointer-events:none" />
+        <img src="assets/asterisk.png" alt="LOA*" style="position:relative;width:clamp(190px,26vw,340px);filter:drop-shadow(0 30px 60px rgba(10,144,221,.28));animation:loaFloat 7s ease-in-out infinite" />
+      </div>
+    </div>
+  </section>
+
+  <section id="loja" style="scroll-margin-top:112px;background:#f5f5f7;border-top:1px solid rgba(0,0,0,.04)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(36px,5vw,58px) 22px">
+      <p style="font-size:clamp(24px,3vw,34px);font-weight:600;letter-spacing:-.02em;margin:0 0 6px">Loja. <span style="color:#86868b">Escolha por onde começar.</span></p>
+      <div class="noscroll" style="display:flex;gap:clamp(14px,2vw,26px);overflow-x:auto;padding:20px 2px 8px;scroll-snap-type:x mandatory">
+        <sc-for list="{{ quick }}" as="q" hint-placeholder-count="5">
+          <a href="#" onClick="{{ q.onClick }}" style="flex:0 0 auto;width:144px;text-align:center;scroll-snap-align:start">
+            <div style="width:144px;height:144px;border-radius:50%;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06);display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s" style-hover="transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.14)">
+              <div role="img" aria-label="{{ q.label }}" style="width:96px;height:96px;background-image:url('{{ q.img }}');background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+            </div>
+            <span style="display:block;margin-top:12px;font-size:14px;font-weight:500;color:#1d1d1f">{{ q.label }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1180px;margin:0 auto;padding:clamp(44px,6vw,76px) 22px clamp(10px,2vw,20px)">
+    <h2 style="font-size:clamp(28px,3.6vw,44px);font-weight:600;letter-spacing:-.025em;margin:0 0 6px">Os mais desejados.</h2>
+    <p style="font-size:clamp(17px,1.8vw,21px);color:#86868b;margin:0 0 clamp(24px,3vw,36px)">Uma seleção a dedo do que há de melhor na Apple.</p>
+    <div style="position:relative">
+      <button onClick="{{ scrollFeaturedLeft }}" aria-label="Anterior" style="position:absolute;left:-8px;top:44%;transform:translateY(-50%);z-index:5;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid rgba(0,0,0,.08);box-shadow:0 4px 16px rgba(0,0,0,.16);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#1d1d1f;transition:transform .35s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-50%) scale(1.08)">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg>
+      </button>
+      <button onClick="{{ scrollFeaturedRight }}" aria-label="Próximo" style="position:absolute;right:-8px;top:44%;transform:translateY(-50%);z-index:5;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid rgba(0,0,0,.08);box-shadow:0 4px 16px rgba(0,0,0,.16);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#1d1d1f;transition:transform .35s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-50%) scale(1.08)">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+      </button>
+      <div id="row-featured" class="noscroll" style="display:flex;gap:clamp(14px,2vw,22px);overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory">
+        <sc-for list="{{ featured }}" as="f" hint-placeholder-count="4">
+          <button onClick="{{ f.onClick }}" style="flex:0 0 auto;width:min(68vw,290px);scroll-snap-align:start;border:none;padding:0;cursor:pointer;background:#f5f5f7;border-radius:22px;overflow:hidden;text-align:left;position:relative;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s" style-hover="transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.14)">
+            <div role="img" aria-label="{{ f.name }}" style="width:100%;aspect-ratio:4/3;background-image:url('{{ f.img }}');background-size:cover;background-position:center"></div>
+            <span style="position:absolute;left:20px;bottom:18px;display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.9);color:#1d1d1f;font-size:14px;font-weight:600;padding:9px 16px;border-radius:980px;box-shadow:0 4px 14px rgba(0,0,0,.12)">Ver {{ f.name }} <span style="color:#0a90dd"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span></span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <sc-for list="{{ categories }}" as="cat" hint-placeholder-count="5">
+    <section id="{{ cat.id }}" style="scroll-margin-top:112px;max-width:1180px;margin:0 auto;padding:clamp(40px,5vw,64px) 22px 0">
+      <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:26px">
+        <h2 style="font-size:clamp(26px,3.2vw,38px);font-weight:600;letter-spacing:-.025em;margin:0">{{ cat.label }}</h2>
+        <span style="font-size:15px;color:#86868b">{{ cat.note }}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:clamp(14px,1.6vw,20px)">
+        <sc-for list="{{ cat.products }}" as="p" hint-placeholder-count="3">
+          <button onClick="{{ p.onClick }}" style="display:flex;flex-direction:column;align-items:center;text-align:center;background:#f5f5f7;border:none;border-radius:20px;padding:26px 22px 24px;cursor:pointer;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s" style-hover="transform:translateY(-6px);box-shadow:0 20px 42px rgba(0,0,0,.13)">
+            <span style="font-size:12px;font-weight:600;color:#0a90dd;text-transform:uppercase">{{ p.kicker }}</span>
+            <h3 style="font-size:22px;font-weight:600;letter-spacing:-.02em;margin:5px 0 3px;color:#1d1d1f">{{ p.name }}</h3>
+            <p style="font-size:13px;color:#86868b;margin:0;min-height:34px">{{ p.tagline }}</p>
+            <div style="width:100%;display:flex;align-items:center;justify-content:center;height:190px;margin:8px 0 14px"><div role="img" aria-label="{{ p.name }}" style="width:100%;height:190px;border-radius:14px;background-image:url('{{ p.img }}');background-size:contain;background-position:center;background-repeat:no-repeat"></div></div>
+            <span style="display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#25cdf8 0%,#0a90dd 52%,#0567bb 100%);color:#fff;font-size:14px;font-weight:500;padding:11px 20px;border-radius:980px;min-height:44px">Ver detalhes <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
+          </button>
+        </sc-for>
+      </div>
+    </section>
+  </sc-for>
+
+  <section style="max-width:1180px;margin:clamp(50px,7vw,88px) auto 0;padding:0 22px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+      <div style="background:#f5f5f7;border-radius:22px;padding:clamp(30px,4vw,48px)">
+        <div style="width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#25cdf8 0%,#0a90dd 52%,#0567bb 100%);display:flex;align-items:center;justify-content:center;margin-bottom:20px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"></path><path d="M14 10h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg></div>
+        <h3 style="font-size:clamp(22px,2.4vw,28px);font-weight:600;margin:0 0 8px">Entrega garantida</h3>
+        <p style="font-size:16px;line-height:1.5;color:#6e6e73;margin:0">🇧🇷 Envio para todo o Brasil, com embalagem cuidadosa e rastreio até a sua porta.</p>
+      </div>
+      <div style="background:#f5f5f7;border-radius:22px;padding:clamp(30px,4vw,48px)">
+        <div style="width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#25cdf8 0%,#0a90dd 52%,#0567bb 100%);display:flex;align-items:center;justify-content:center;margin-bottom:20px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 8.3-7 9.6C8 19.3 5 15.4 5 11V6l7-3z"></path><path d="M9.2 11.8l1.9 1.9 3.7-3.9"></path></svg></div>
+        <h3 style="font-size:clamp(22px,2.4vw,28px);font-weight:600;margin:0 0 8px">Precisa de ajuda para escolher?</h3>
+        <p style="font-size:16px;line-height:1.5;color:#6e6e73;margin:0 0 18px">Compra segura e atendimento humano. A gente te ajuda a achar o produto certo, sem enrolação.</p>
+        <a href="{{ waGeneral }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:#0a90dd;font-size:16px;font-weight:500">Falar com a LOA* <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+</sc-if>
+
+<sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+<main class="detail-main" style="max-width:1180px;margin:0 auto;padding:22px 22px 0">
+  <a href="#" onClick="{{ goHome }}" style="display:inline-flex;align-items:center;gap:6px;font-size:14px;color:#6e6e73;margin:6px 0 22px"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg> {{ curP.catLabel }} · voltar à loja</a>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid rgba(0,0,0,.1)">
+      <h1 style="font-size:clamp(24px,2.6vw,30px);font-weight:600;letter-spacing:-.02em;margin:0">{{ curP.name }}</h1>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:14px 0;border-bottom:1px solid rgba(0,0,0,.08);color:#1d1d1f;font-size:14px;font-weight:500">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"></path><path d="M14 10h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg>
+      Em estoque
+    </div>
+    <div class="detail-grid" style="display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(24px,4vw,60px);align-items:start;margin-top:clamp(24px,3vw,36px)">
+      <div>
+        <div style="position:relative;background:#f5f5f7;border-radius:20px;display:flex;align-items:center;justify-content:center;padding:clamp(20px,3vw,36px);min-height:clamp(420px,46vw,560px)">
+          <div role="img" aria-label="{{ curP.name }}" style="width:100%;height:clamp(380px,42vw,520px);border-radius:16px;background-image:url('{{ mainImg }}');background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+          <sc-if value="{{ hasNav }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ navNext }}" aria-label="Próxima imagem" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid rgba(0,0,0,.08);box-shadow:0 4px 16px rgba(0,0,0,.16);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#1d1d1f" style-hover="transform:translateY(-50%) scale(1.08)">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+            </button>
+          </sc-if>
+        </div>
+        <sc-if value="{{ hasNav }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;justify-content:center;gap:8px;margin-top:16px">
+            <sc-for list="{{ navDots }}" as="d" hint-placeholder-count="3">
+              <button onClick="{{ d.onClick }}" style="{{ d.style }}"></button>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+      <div>
+        <sc-if value="{{ hasSizes }}" hint-placeholder-val="{{ false }}">
+          <h2 style="font-size:20px;font-weight:600;margin:0 0 4px">Modelo. <span style="color:#86868b;font-weight:500">Qual é o melhor para você?</span></h2>
+          <div style="display:flex;flex-direction:column;gap:10px;margin:16px 0 14px">
+            <sc-for list="{{ modelCards }}" as="mc" hint-placeholder-count="2">
+              <button onClick="{{ mc.onClick }}" style="{{ mc.boxStyle }}">
+                <span>
+                  <span style="display:block;font-size:15px;font-weight:600;color:#1d1d1f">{{ mc.name }}</span>
+                  <span style="display:block;font-size:13px;color:#86868b;margin-top:2px">{{ mc.sizeLabel }}</span>
+                </span>
+              </button>
+            </sc-for>
+          </div>
+          <div style="background:#f5f5f7;border-radius:14px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;margin-bottom:28px">
+            <span style="flex:0 0 auto;width:22px;height:22px;border-radius:50%;border:1.5px solid #6e6e73;display:flex;align-items:center;justify-content:center;font-size:13px;color:#6e6e73">+</span>
+            <span style="font-size:13px;line-height:1.5;color:#4b4b4d"><strong style="color:#1d1d1f">Precisa de ajuda para escolher um modelo?</strong><br />Veja as diferenças de tamanho da tela e duração da bateria.</span>
+          </div>
+        </sc-if>
+        <h2 style="font-size:20px;font-weight:600;margin:0 0 10px">Cor. <span style="color:#86868b;font-weight:500">Escolha sua favorita.</span></h2>
+        <p style="font-size:14px;font-weight:600;margin:0 0 12px">Cor - {{ selectedColorName }}</p>
+        <div style="display:flex;gap:12px;margin-bottom:28px">
+          <sc-for list="{{ colors }}" as="c" hint-placeholder-count="3">
+            <button onClick="{{ c.onClick }}" title="{{ c.name }}" style="{{ c.style }}"></button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ hasStorage }}" hint-placeholder-val="{{ false }}">
+          <h2 style="font-size:20px;font-weight:600;margin:0 0 12px">Armazenamento.</h2>
+          <div style="display:inline-flex;flex-wrap:wrap;background:#f5f5f7;border-radius:14px;padding:4px;gap:4px;margin-bottom:16px">
+            <sc-for list="{{ storageOptions }}" as="st" hint-placeholder-count="3">
+              <button onClick="{{ st.onClick }}" style="{{ st.buttonStyle }}">{{ st.label }}</button>
+            </sc-for>
+          </div>
+        </sc-if>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <a href="{{ waBuy }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#0a90dd;color:#fff;font-size:17px;font-weight:600;padding:16px 24px;border-radius:980px;box-shadow:0 10px 26px rgba(10,144,221,.34);min-height:52px"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.32-1.95 1.36-.53.04-1.02.24-3.45-.72-2.92-1.15-4.76-4.15-4.9-4.34-.14-.19-1.17-1.55-1.17-2.96s.74-2.1 1-2.39c.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.38-.42.51-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.89.27.14.45.21.52.33.07.12.07.69-.17 1.37z"></path></svg> Comprar no WhatsApp</a>
+          <a href="{{ waAsk }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;background:#fff;color:#1d1d1f;font-size:16px;font-weight:500;padding:15px 24px;border-radius:980px;border:1px solid rgba(0,0,0,.14);min-height:50px">Tirar dúvidas no WhatsApp</a>
+        </div>
+        <p style="font-size:13px;color:#86868b;margin:16px 0 0">🇧🇷 Envio para todo o Brasil · Compra segura</p>
+      </div>
+    </div>
+
+  <section style="margin:clamp(52px,7vw,90px) 0 0">
+    <h2 style="font-size:clamp(26px,3vw,38px);font-weight:600;letter-spacing:-.025em;margin:0 0 clamp(22px,3vw,34px);text-align:center">Por que você vai amar</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+      <sc-for list="{{ features }}" as="f" hint-placeholder-count="3">
+        <div style="background:#f5f5f7;border-radius:20px;padding:30px 26px">
+          <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#25cdf8 0%,#0a90dd 52%,#0567bb 100%);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:#fff;font-size:20px;font-weight:700">{{ f.num }}</div>
+          <h3 style="font-size:19px;font-weight:600;margin:0 0 8px">{{ f.title }}</h3>
+          <p style="font-size:14px;line-height:1.55;color:#6e6e73;margin:0">{{ f.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <sc-if value="{{ hasHighlights }}" hint-placeholder-val="{{ false }}">
+    <section style="margin:clamp(28px,3vw,40px) 0 0">
+      <h2 style="font-size:clamp(22px,2.6vw,30px);font-weight:600;margin:0 0 20px;text-align:center">Todos os ângulos</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px">
+        <sc-for list="{{ highlights }}" as="h" hint-placeholder-count="2">
+          <div style="background:#f5f5f7;border-radius:22px;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:340px;padding:22px">
+            <div role="img" aria-label="{{ curP.name }}" style="width:100%;height:320px;border-radius:14px;background-image:url('{{ h.img }}');background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+
+  <section style="margin:clamp(48px,6vw,80px) auto 0;max-width:760px">
+    <h2 style="font-size:clamp(22px,2.6vw,30px);font-weight:600;margin:0 0 20px;text-align:center">Especificações</h2>
+    <div style="border-top:1px solid rgba(0,0,0,.1)">
+      <sc-for list="{{ specs }}" as="s" hint-placeholder-count="4">
+        <div class="detail-spec" style="display:grid;grid-template-columns:180px 1fr;gap:20px;padding:16px 4px;border-bottom:1px solid rgba(0,0,0,.08)">
+          <span style="font-size:14px;font-weight:600">{{ s.label }}</span>
+          <span style="font-size:14px;color:#6e6e73;line-height:1.5">{{ s.value }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="margin:clamp(52px,7vw,90px) 0 0">
+    <h2 style="font-size:clamp(24px,2.8vw,34px);font-weight:600;letter-spacing:-.025em;margin:0 0 24px">Você também pode gostar</h2>
+    <div style="position:relative">
+      <button onClick="{{ scrollRelatedLeft }}" aria-label="Anterior" style="position:absolute;left:-8px;top:50%;transform:translateY(-50%);z-index:5;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid rgba(0,0,0,.08);box-shadow:0 4px 16px rgba(0,0,0,.16);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#1d1d1f;transition:transform .35s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-50%) scale(1.08)">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg>
+      </button>
+      <button onClick="{{ scrollRelatedRight }}" aria-label="Próximo" style="position:absolute;right:-8px;top:50%;transform:translateY(-50%);z-index:5;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid rgba(0,0,0,.08);box-shadow:0 4px 16px rgba(0,0,0,.16);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#1d1d1f;transition:transform .35s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-50%) scale(1.08)">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+      </button>
+      <div id="row-related" class="noscroll" style="display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="4">
+          <button onClick="{{ r.onClick }}" style="flex:0 0 auto;width:min(70vw,240px);scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;text-align:center;background:#f5f5f7;border:none;border-radius:20px;padding:24px 20px;cursor:pointer;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s" style-hover="transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.14)">
+            <div style="width:100%;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:14px"><div role="img" aria-label="{{ r.name }}" style="width:100%;height:150px;border-radius:12px;background-image:url('{{ r.img }}');background-size:contain;background-position:center;background-repeat:no-repeat"></div></div>
+            <h3 style="font-size:17px;font-weight:600;margin:0 0 4px">{{ r.name }}</h3>
+            <span style="font-size:13px;color:#0a90dd;font-weight:500">Ver detalhes ›</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <div class="buybar" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:75;align-items:center;gap:12px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-top:1px solid rgba(0,0,0,.1);box-shadow:0 -6px 20px rgba(0,0,0,.08)">
+    <div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ curP.name }}</div></div>
+    <a href="{{ waBuy }}" target="_blank" rel="noopener" style="flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;background:#0a90dd;color:#fff;font-size:16px;font-weight:600;padding:14px 24px;border-radius:980px;min-height:50px;box-shadow:0 8px 20px rgba(10,144,221,.34)"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.32-1.95 1.36-.53.04-1.02.24-3.45-.72-2.92-1.15-4.76-4.15-4.9-4.34-.14-.19-1.17-1.55-1.17-2.96s.74-2.1 1-2.39c.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.38-.42.51-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.89.27.14.45.21.52.33.07.12.07.69-.17 1.37z"></path></svg> Comprar</a>
+  </div>
+</main>
+</sc-if>
+
+<footer style="background:#f5f5f7;margin-top:clamp(56px,8vw,100px);border-top:1px solid rgba(0,0,0,.06)">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(44px,6vw,72px) 22px;text-align:center">
+    <img src="assets/logo-real2.png" alt="LOA* Select" style="height:76px;width:auto;margin:0 auto 6px" />
+    <p style="font-size:14px;color:#86868b;margin:0 0 26px">Curadoria de produtos Apple · 🇧🇷 Envio para todo o Brasil</p>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:980px;padding:9px 18px;margin-bottom:26px">
+      <span style="display:flex;gap:2px;color:#f5a623">★★★★★</span>
+      <span style="font-size:13px;font-weight:600;color:#1d1d1f">Avaliação 5 estrelas no Google</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
+      <a href="{{ waGeneral }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#0a90dd;color:#fff;font-size:15px;font-weight:600;padding:13px 24px;border-radius:980px;box-shadow:0 8px 22px rgba(10,144,221,.3)"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.32-1.95 1.36-.53.04-1.02.24-3.45-.72-2.92-1.15-4.76-4.15-4.9-4.34-.14-.19-1.17-1.55-1.17-2.96s.74-2.1 1-2.39c.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.38-.42.51-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.89.27.14.45.21.52.33.07.12.07.69-.17 1.37z"></path></svg> WhatsApp</a>
+      <a href="{{ instaUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:#1d1d1f;font-size:15px;font-weight:500;padding:13px 22px;border-radius:980px;border:1px solid rgba(0,0,0,.12)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg> @loa.select</a>
+    </div>
+    <p style="font-size:11px;line-height:1.7;color:#86868b;max-width:560px;margin:34px auto 0">LOA<span style="color:#0a90dd">*</span> Select é uma revendedora independente. Apple, iPhone, MacBook, iPad, AirPods e Apple Watch são marcas registradas da Apple Inc.</p>
+  </div>
+</footer>
+
+<sc-if value="{{ showFloat }}" hint-placeholder-val="{{ true }}">
+  <a href="{{ waGeneral }}" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp" class="wa-float" style="position:fixed;right:22px;bottom:22px;z-index:80;width:60px;height:60px;border-radius:50%;background:#0a90dd;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(10,144,221,.42);animation:waBob 2.4s ease-in-out infinite,waPulse 2.4s ease-out infinite">
+    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.32-1.95 1.36-.53.04-1.02.24-3.45-.72-2.92-1.15-4.76-4.15-4.9-4.34-.14-.19-1.17-1.55-1.17-2.96s.74-2.1 1-2.39c.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.38-.42.51-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.89.27.14.45.21.52.33.07.12.07.69-.17 1.37z"></path></svg>
+  </a>
+</sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1600},&quot;waNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5548998291681&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;},&quot;instaUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.instagram.com/loa.select/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;},&quot;showFloatingButton&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Comportamento&quot;}}">
+function A(f){return "assets/"+f;}
+function waLink(number,text){return "https://wa.me/"+number+"?text="+encodeURIComponent(text);}
+const WA_DEFAULT="5548998291681";
+const INSTA_DEFAULT="https://www.instagram.com/loa.select/";
+
+const CATS=[
+  {id:"iphone",label:"iPhone",note:"O poder na palma da mão."},
+  {id:"mac",label:"Mac",note:"Potência para criar."},
+  {id:"ipad",label:"iPad",note:"Versátil como você."},
+  {id:"airpods",label:"AirPods",note:"Som que envolve."},
+  {id:"watch",label:"Apple Watch",note:"Saúde no pulso."}
+];
+const QUICK=[
+  {id:"iphone",label:"iPhone",img:"nav-iphone.png",productId:"iphone-17-pro"},
+  {id:"mac",label:"Mac",img:"nav-mac.png",productId:"macbook-pro"},
+  {id:"ipad",label:"iPad",img:"nav-ipad.png",productId:"ipad"},
+  {id:"watch",label:"Apple Watch",img:"nav-watch.png",productId:"watch-s11"},
+  {id:"airpods",label:"AirPods",img:"airpods-max.png",productId:"airpods-pro-3"}
+];
+const FEATURED=[
+  {id:"iphone-17-pro",img:"feat-iphone-17-pro.jpg",name:"iPhone 17 Pro"},
+  {id:"airpods-max",img:"feat-airpods-max.jpg",name:"AirPods Max"},
+  {id:"macbook-pro",img:"feat-macbook.jpg",name:"MacBook Pro"},
+  {id:"iphone-17e",img:"feat-iphone-17e.jpg",name:"iPhone 17e"}
+];
+const PRODUCTS=[
+  {id:"iphone-17-pro",cat:"iphone",catLabel:"iPhone",kicker:"Novo",name:"iPhone 17 Pro",tagline:"O topo da linha. Titânio, câmera Pro e chip A19 Pro.",
+   blurb:"Estrutura em titânio, sistema de câmera Pro Fusion de 48 MP e o desempenho mais rápido já visto em um iPhone. Feito para quem não abre mão de nada.",
+   img:"iphone-17-pro.jpg",gallery:["iphone-17-pro.jpg","g-17pro-blue.jpg","g-17pro-orange.jpg","g-17pro-silver.jpg","g-17pro-camera.png"],
+   colors:[["Prata","#e2e3e5"],["Azul-profundo","#28436b"],["Laranja-cósmico","#c9502a"]],
+   features:[["Chip A19 Pro, 12GB de RAM","Desempenho de sobra para multitarefas pesadas, jogos e Apple Intelligence."],["Tela Super Retina XDR OLED","ProMotion 120Hz e Ceramic Shield 2, para brilho, fluidez e resistência."],["Câmeras Fusion 48MP","Sistema triplo — principal, ultra-angular e teleobjetiva — tudo em 48 MP."],["Estrutura em alumínio aeroespacial","Leve e resistente, com certificação IP68 contra água e poeira."]],
+   specs:[["Tela","Super Retina XDR OLED de 6,3\" ProMotion 120Hz"],["Chip","A19 Pro, 12GB RAM"],["Câmera","Fusion 48MP tripla (principal, ultra-angular e teleobjetiva)"],["Material","Alumínio aeroespacial, certificação IP68"]],
+   sizes:[
+     {key:"pro",label:"6,3\"",name:"iPhone 17 Pro",tagline:"O topo da linha. Alumínio aeroespacial, câmera Fusion e chip A19 Pro.",img:"promax-silver-main.webp",gallery:["promax-silver-main.webp","promax-silver-back.webp","promax-silver-macro.webp","promax-blue-main.webp","promax-blue-back.webp","promax-blue-macro.webp","promax-orange-main.webp","promax-orange-back.webp","promax-orange-macro.webp"],
+      specs:[["Tela","Super Retina XDR OLED de 6,3\" ProMotion 120Hz, Ceramic Shield 2"],["Chip","A19 Pro, 12GB RAM"],["Câmera","Fusion 48MP tripla (principal, ultra-angular e teleobjetiva)"],["Bateria","Até 27 horas de reprodução de vídeo"],["Material","Alumínio aeroespacial, certificação IP68"]],
+      storageOptions:[{key:"256",label:"256GB"},{key:"512",label:"512GB"}],
+      inches:"6,3",colorImages:["promax-silver-main.webp","promax-blue-main.webp","promax-orange-main.webp"],
+      colorGallery:[["promax-silver-back.webp","promax-silver-macro.webp"],["promax-blue-back.webp","promax-blue-macro.webp"],["promax-orange-back.webp","promax-orange-macro.webp","promax-orange-plainback.jpg","promax-orange-side.jpg","promax-orange-frontback.jpg"]]},
+     {key:"promax",label:"6,9\"",name:"iPhone 17 Pro Max",tagline:"A mesma potência Pro, em uma tela ainda maior.",img:"promax-silver-main.webp",gallery:["promax-silver-main.webp","promax-silver-back.webp","promax-silver-macro.webp","promax-blue-main.webp","promax-blue-back.webp","promax-blue-macro.webp","promax-orange-main.webp","promax-orange-back.webp","promax-orange-macro.webp"],
+      specs:[["Tela","Super Retina XDR OLED de 6,9\" ProMotion 120Hz, Ceramic Shield 2"],["Chip","A19 Pro, 12GB RAM"],["Câmera","Fusion 48MP tripla (principal, ultra-angular e teleobjetiva)"],["Bateria","Até 37 horas de reprodução de vídeo"],["Material","Alumínio aeroespacial, certificação IP68"]],
+      storageOptions:[{key:"256",label:"256GB"},{key:"512",label:"512GB"},{key:"1tb",label:"1TB"},{key:"2tb",label:"2TB"}],
+      inches:"6,9",colorImages:["promax-silver-main.webp","promax-blue-main.webp","promax-orange-main.webp"],
+      colorGallery:[["promax-silver-back.webp","promax-silver-macro.webp"],["promax-blue-back.webp","promax-blue-macro.webp"],["promax-orange-back.webp","promax-orange-macro.webp","promax-orange-plainback.jpg","promax-orange-side.jpg","promax-orange-frontback.jpg"]]}
+   ]},
+  {id:"iphone-17",cat:"iphone",catLabel:"iPhone",kicker:"Novo",name:"iPhone 17",tagline:"O essencial, elevado a outro nível.",
+   blurb:"Tela mais brilhante, câmera dupla Fusion e o Ceramic Shield mais resistente. O iPhone completo para o dia a dia.",
+   img:"iphone-17.jpg",gallery:["iphone-17.jpg"],
+   colors:[["Lavanda","#d7d2ec"],["Sálvia","#c9d6c4"],["Azul-névoa","#c9d7e2"],["Branco","#f1f1ef"],["Preto","#2b2b2d"]],
+   features:[["Câmera dupla Fusion","Fotos nítidas em qualquer luz, com modo Retrato e Estilos Fotográficos."],["Ceramic Shield 2","A frente de vidro mais dura já colocada em um smartphone."],["Bateria para o dia todo","Autonomia de sobra do café da manhã ao fim da noite."]],
+   specs:[["Tela","Super Retina XDR de 6,1\""],["Chip","A19"],["Câmera","Dupla Fusion de 48 MP"],["Resistência","Ceramic Shield 2"]],
+   storageOptions:[{key:"256",label:"256GB"},{key:"512",label:"512GB"}]},
+  {id:"iphone-air",cat:"iphone",catLabel:"iPhone",kicker:"Novo",name:"iPhone Air",tagline:"Fino como nunca. Leve como o ar.",
+   blurb:"O iPhone mais fino de todos os tempos, em titânio, sem abrir mão de tela grande e câmera Fusion de 48 MP.",
+   img:"iphone-air.png",gallery:["iphone-air.png","g-air-2.jpg","g-air-camera.png"],
+   colors:[["Azul-céu","#c9d7e2"],["Dourado-claro","#ece3d3"],["Preto-espaço","#3a3a3c"],["Branco-nuvem","#f1f1ef"]],
+   features:[["Design ultrafino","Titânio aeroespacial em um corpo incrivelmente leve e resistente."],["Câmera Fusion 48 MP","Uma lente que faz o trabalho de várias, com zoom óptico integrado."],["Chip A19 Pro","Potência de sobra em um formato que cabe em qualquer lugar."]],
+   specs:[["Tela","Super Retina XDR de 6,5\""],["Chip","A19 Pro"],["Câmera","Fusion de 48 MP"],["Material","Titânio"]],
+   storageOptions:[{key:"256",label:"256GB"},{key:"512",label:"512GB"},{key:"1tb",label:"1TB"}]},
+  {id:"iphone-17e",cat:"iphone",catLabel:"iPhone",kicker:"Custo-benefício",name:"iPhone 17e",tagline:"Todo o essencial, com preço inteligente.",
+   blurb:"A porta de entrada para o ecossistema Apple: chip rápido, câmera de 48 MP e a experiência iOS completa.",
+   img:"iphone-17e.jpg",gallery:["iphone-17e.jpg","feat-iphone-17e.jpg"],
+   colors:[["Preto","#2b2b2d"],["Branco","#f1f1ef"]],
+   features:[["Câmera de 48 MP","Fotos detalhadas e vídeos nítidos no dia a dia."],["Chip veloz","Apps, jogos e Apple Intelligence rodando com fluidez."],["iOS completo","Todos os recursos e a segurança do ecossistema Apple."]],
+   specs:[["Tela","Super Retina XDR de 6,1\""],["Chip","A19"],["Câmera","48 MP"],["Conector","USB-C"]],
+   storageOptions:[{key:"128",label:"128GB"},{key:"256",label:"256GB"}]},
+  {id:"macbook-pro",cat:"mac",catLabel:"Mac",kicker:"Novo",name:"MacBook Pro",tagline:"Potência de sobra para criar sem limites.",
+   blurb:"Chip da série M, tela Liquid Retina XDR e bateria que dura o dia todo. Feito para edição de vídeo, código e trabalho pesado.",
+   img:"macbook-pro.jpg",gallery:["macbook-pro.jpg","feat-macbook.jpg"],
+   colors:[["Cinza-espacial","#7d7e80"],["Prateado","#e2e3e5"]],
+   features:[["Desempenho profissional","Renderize, compile e edite em 4K sem travar."],["Tela Liquid Retina XDR","Brilho extremo, contraste real e cores fiéis."],["Bateria o dia todo","Trabalhe sem procurar tomada, onde estiver."]],
+   specs:[["Tela","Liquid Retina XDR de 14\" ou 16\""],["Chip","Apple série M"],["Portas","Thunderbolt, HDMI, SDXC"],["Bateria","Até 22 horas"]],
+   storageOptions:[{key:"512",label:"512GB"},{key:"1tb",label:"1TB"},{key:"2tb",label:"2TB"}]},
+  {id:"macbook-air",cat:"mac",catLabel:"Mac",kicker:"Novo",name:"MacBook Air",tagline:"Leveza que vai a qualquer lugar.",
+   blurb:"Fino, silencioso e surpreendentemente potente. O notebook perfeito para estudar, trabalhar e criar em movimento.",
+   img:"macbook-air.jpg",gallery:["macbook-air.jpg"],
+   colors:[["Meia-noite","#2e3641"],["Estelar","#e6e0d4"],["Cinza-espacial","#8a8b8d"],["Prateado","#e2e3e5"]],
+   features:[["Design ultrafino","Menos de 1,3 kg para levar na mochila o dia inteiro."],["Silencioso","Sem ventoinha: nenhum ruído, mesmo sob carga."],["Bateria de longa duração","Até 18 horas para não depender da tomada."]],
+   specs:[["Tela","Liquid Retina de 13\" ou 15\""],["Chip","Apple série M"],["Peso","A partir de 1,24 kg"],["Bateria","Até 18 horas"]],
+   storageOptions:[{key:"256",label:"256GB"},{key:"512",label:"512GB"}]},
+  {id:"ipad",cat:"ipad",catLabel:"iPad",kicker:"Versátil",name:"iPad",tagline:"Criatividade sem limites, do seu jeito.",
+   blurb:"Tela brilhante, desempenho ágil e suporte a Apple Pencil. Perfeito para desenhar, anotar, estudar e assistir.",
+   img:"ipad.png",gallery:["ipad.png"],
+   colors:[["Prateado","#e2e3e5"],["Cinza-espacial","#7d7e80"]],
+   features:[["Tela Liquid Retina","Cores vivas e ótima leitura em qualquer ambiente."],["Apple Pencil","Escreva e desenhe com precisão e baixa latência."],["Portátil de verdade","Fino e leve para levar para todo lugar."]],
+   specs:[["Tela","Liquid Retina"],["Chip","Apple série A/M"],["Acessórios","Apple Pencil e Magic Keyboard"],["Conector","USB-C"]],
+   storageOptions:[{key:"128",label:"128GB"},{key:"256",label:"256GB"}]},
+  {id:"airpods-pro-3",cat:"airpods",catLabel:"AirPods",kicker:"Novo",name:"AirPods Pro 3",tagline:"A melhor coisa que você nunca ouviu.",
+   blurb:"Cancelamento de ruído de outro nível, áudio espacial e ajuste confortável. Silêncio quando você quer, som imersivo quando precisa.",
+   img:"airpods-pro-3.png",icon:"icon-airpods-pro-3.svg",gallery:["airpods-pro-3.png","promo-airpods-pro-3.jpg"],
+   colors:[["Branco","#f1f1ef"]],
+   features:[["Cancelamento de ruído","O ANC mais avançado, para focar no que importa."],["Áudio espacial","Som envolvente que acompanha o movimento da cabeça."],["Ajuste confortável","Pontas de silicone em vários tamanhos para vedação perfeita."]],
+   specs:[["Áudio","Espacial personalizado com ANC"],["Bateria","Longa duração com estojo MagSafe"],["Resistência","À água e suor"],["Estojo","Recarga MagSafe / USB-C"]],
+},
+  {id:"airpods-4",cat:"airpods",catLabel:"AirPods",kicker:"Novo",name:"AirPods 4",tagline:"Som imersivo em um design icônico.",
+   blurb:"O AirPods aberto mais avançado, com áudio espacial e opção de cancelamento de ruído. Confortável o dia inteiro.",
+   img:"airpods-4.png",icon:"icon-airpods-4.svg",gallery:["airpods-4.png","g-airpods4-anc.png"],
+   colors:[["Branco","#f1f1ef"]],
+   features:[["Design aberto","Encaixe leve e confortável, sem pontas de silicone."],["Áudio espacial","Experiência de som envolvente em filmes e músicas."],["Cancelamento de ruído","Versão com ANC para silenciar o mundo ao redor."]],
+   specs:[["Áudio","Espacial personalizado"],["Chip","Apple H2"],["Estojo","Recarga USB-C"],["Bateria","Longa duração"]],
+},
+  {id:"airpods-max",cat:"airpods",catLabel:"AirPods",kicker:"Premium",name:"AirPods Max",tagline:"Áudio de altíssima fidelidade.",
+   blurb:"Fones over-ear com áudio espacial, cancelamento de ruído de referência e acabamento em alumínio. O som mais rico da linha AirPods.",
+   img:"airpods-max.png",icon:"icon-airpods-max.svg",gallery:["airpods-max.png","g-max-black.png","g-max-blue.png","g-max-orange.png","g-max-purple.png","g-max-stardust.png"],
+   colors:[["Prata-estelar","#e6e5e0"],["Azul","#8497ad"],["Roxo","#b4a7c6"],["Laranja","#df8a4f"],["Meia-noite","#3a3f47"]],
+   features:[["Áudio de referência","Drivers de alta fidelidade com detalhe em toda a faixa."],["ANC premium","Cancelamento de ruído e modo Ambiente de altíssimo nível."],["Alumínio e conforto","Estrutura premium com almofadas em malha respirável."]],
+   specs:[["Tipo","Over-ear circum-aural"],["Áudio","Espacial com rastreamento dinâmico"],["Material","Alumínio e aço inoxidável"],["Conector","USB-C"]],
+},
+  {id:"watch-s11",cat:"watch",catLabel:"Apple Watch",kicker:"Novo",name:"Apple Watch Series 11",tagline:"Seu dia, sempre um passo à frente.",
+   blurb:"Monitoramento de saúde avançado, tela sempre ativa e resistência para o dia a dia. Seu treino, seu sono e sua rotina no pulso.",
+   img:"watch-s11.png",icon:"icon-watch-s11.svg",gallery:["watch-s11.png","promo-watch-s11.jpg"],
+   colors:[["Meia-noite","#2e3641"],["Estelar","#e6e0d4"],["Prata","#e2e3e5"],["Rosé","#e5c3b8"]],
+   features:[["Saúde no pulso","Frequência cardíaca, oxigênio no sangue e ECG."],["Tela sempre ativa","Veja as horas e seus dados sem levantar o pulso."],["Bateria para o dia","Autonomia para acompanhar sua rotina completa."]],
+   specs:[["Tela","Retina LTPO sempre ativa"],["Saúde","ECG, SpO₂, temperatura"],["Resistência","À água (natação)"],["Conectividade","GPS / Celular"]],
+   sizes:[{key:"41",label:"41mm",name:"Apple Watch Series 11 41mm"},{key:"45",label:"45mm",name:"Apple Watch Series 11 45mm"}]},
+  {id:"watch-ultra3",cat:"watch",catLabel:"Apple Watch",kicker:"Aventura",name:"Apple Watch Ultra 3",tagline:"Feito para ir além dos limites.",
+   blurb:"Titânio robusto, GPS de precisão e bateria de longa duração. O Apple Watch para trilhas, mergulhos e esportes extremos.",
+   img:"watch-ultra3-titanium.webp",icon:"icon-watch-ultra3.svg",gallery:["watch-ultra3-titanium.webp","watch-ultra3-black.webp"],
+   colorImages:["watch-ultra3-titanium.webp","watch-ultra3-black.webp"],
+   colors:[["Titânio natural","#c9c6be"],["Titânio preto","#3a3a3c"]],
+   features:[["Caixa de titânio","Extremamente resistente para qualquer terreno."],["Bateria de longa duração","Autonomia estendida para aventuras de vários dias."],["GPS de precisão","Rastreamento exato em ambientes desafiadores."]],
+   specs:[["Caixa","Titânio de 49 mm"],["Tela","A mais brilhante de um Apple Watch"],["Resistência","Mergulho até 100 m"],["Botão","Botão de Ação personalizável"]],
+}
+];
+const BY={}; PRODUCTS.forEach(function(p){BY[p.id]=p;});
+
+class Component extends DCLogic {
+  state={hash:"",menuOpen:false,galleryIndex:0,sizeKey:null,colorIndex:0,storageKey:null};
+
+  componentDidMount(){
+    this._onHash=()=>{
+      window.scrollTo(0,0);
+      this.setState({hash:window.location.hash.replace(/^#/,""),galleryIndex:0,sizeKey:null,colorIndex:0,storageKey:null});
+      if(this._pendingCat){var id=this._pendingCat;this._pendingCat=null;setTimeout(()=>this.scrollCat(id),60);}
+    };
+    window.addEventListener("hashchange",this._onHash);
+    this.setState({hash:window.location.hash.replace(/^#/,"")});
+  }
+  componentWillUnmount(){window.removeEventListener("hashchange",this._onHash);}
+
+  openProduct=(id,e)=>{if(e&&e.preventDefault)e.preventDefault();this.setState({menuOpen:false});window.location.hash="p/"+id;};
+  goHome=(e)=>{if(e&&e.preventDefault)e.preventDefault();this.setState({menuOpen:false});if(window.location.hash)window.location.hash="";else this.forceUpdate();};
+  goCat=(id,e)=>{if(e&&e.preventDefault)e.preventDefault();this.setState({menuOpen:false});if(window.location.hash){this._pendingCat=id;window.location.hash="";}else this.scrollCat(id);};
+  toggleMenu=()=>{this.setState(function(s){return {menuOpen:!s.menuOpen};});};
+  setImg=(i)=>{this.setState({galleryIndex:i});};
+  setSize=(key)=>{this.setState({sizeKey:key,galleryIndex:0,storageKey:null});};
+  scrollRow=(id,dir)=>{var el=document.getElementById(id);if(el)el.scrollBy({left:dir*Math.max(300,el.clientWidth*0.85),behavior:"smooth"});};
+  scrollCat=(id)=>{var el=document.getElementById(id);if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-100,behavior:"smooth"});};
+
+  renderVals(){
+    var waNumber=this.props.waNumber||WA_DEFAULT;
+    var instaUrl=this.props.instaUrl||INSTA_DEFAULT;
+    var showFloat=this.props.showFloatingButton!==false;
+    var waGeneral=waLink(waNumber,"Olá, LOA* Select! Quero saber mais sobre os produtos disponíveis.");
+    var hash=this.state.hash||"";
+    var isDetail=hash.indexOf("p/")===0;
+    var isHome=!isDetail;
+    var curP=isDetail?(BY[hash.slice(2)]||PRODUCTS[0]):null;
+    var self=this;
+
+    var navCats=CATS.map(function(c){return {label:c.label,onClick:function(e){self.goCat(c.id,e);}};});
+    var quick=QUICK.map(function(q){return {label:q.label,img:A(q.img),onClick:function(e){self.openProduct(q.productId,e);}};});
+    var featured=FEATURED.map(function(f){return {name:f.name,img:A(f.img),onClick:function(e){self.openProduct(f.id,e);}};});
+    var categories=CATS.map(function(c){return {id:c.id,label:c.label,note:c.note,products:PRODUCTS.filter(function(p){return p.cat===c.id;}).map(function(p){return {id:p.id,kicker:p.kicker,name:p.name,tagline:p.tagline,img:A(p.img),onClick:function(){self.openProduct(p.id);}};})};});
+
+    var vals={
+      appClass:isDetail?"is-detail":"",
+      isHome:isHome,isDetail:isDetail,menuOpen:this.state.menuOpen,
+      waGeneral:waGeneral,instaUrl:instaUrl,showFloat:showFloat,
+      goHome:this.goHome,goLoja:function(e){self.goCat("loja",e);},toggleMenu:this.toggleMenu,
+      navCats:navCats,quick:quick,featured:featured,categories:categories,
+      scrollFeaturedLeft:function(){self.scrollRow("row-featured",-1);},
+      scrollFeaturedRight:function(){self.scrollRow("row-featured",1);},
+      curP:null
+    };
+
+    if(curP){
+      var hasSizes=!!(curP.sizes&&curP.sizes.length);
+      var activeSize=null;
+      if(hasSizes){
+        var sk=this.state.sizeKey||curP.sizes[0].key;
+        activeSize=curP.sizes.filter(function(s){return s.key===sk;})[0]||curP.sizes[0];
+      }
+      var effName=activeSize?activeSize.name:curP.name;
+      var effTagline=(activeSize&&activeSize.tagline)?activeSize.tagline:curP.tagline;
+      var effImg=(activeSize&&activeSize.img)?activeSize.img:curP.img;
+      var effGallery=(activeSize&&activeSize.gallery)?activeSize.gallery:curP.gallery;
+      var effSpecsRaw=(activeSize&&activeSize.specs)?activeSize.specs:curP.specs;
+      var gi=this.state.galleryIndex||0;
+      var gallery=effGallery.map(function(g,i){return {img:A(g),onClick:function(){self.setImg(i);},style:"flex:0 0 auto;width:72px;height:72px;border-radius:14px;background:#f5f5f7;border:2px solid "+(i===gi?"#0a90dd":"transparent")+";padding:8px;cursor:pointer;display:flex;align-items:center;justify-content:center"};});
+      var colorSource=(activeSize&&activeSize.colorImages)?activeSize:((curP.colorImages)?curP:null);
+      var hasColorImages=!!colorSource;
+      var hasColors=!!(curP.colors&&curP.colors.length);
+      var colorIdx=this.state.colorIndex||0;
+      var colorExtra=(hasColorImages&&colorSource.colorGallery&&colorSource.colorGallery[colorIdx])?colorSource.colorGallery[colorIdx]:null;
+      var highlights=(colorExtra&&colorExtra.length?colorExtra:effGallery.slice(1,4)).map(function(h){return {img:A(h)};});
+      var colors=hasColors?curP.colors.map(function(c,i){var active=hasColorImages&&i===colorIdx;return {name:c[0],onClick:hasColorImages?function(){self.setState({colorIndex:i,galleryIndex:0});}:undefined,style:active?("width:34px;height:34px;border-radius:50%;background:"+c[1]+";border:none;padding:0;cursor:pointer;box-shadow:0 0 0 2px #fff,0 0 0 4px #0a90dd,0 2px 6px rgba(0,0,0,.12)"):("width:30px;height:30px;border-radius:50%;background:"+c[1]+";border:none;padding:0;cursor:"+(hasColorImages?"pointer":"default")+";box-shadow:0 0 0 1px rgba(0,0,0,.12),0 2px 6px rgba(0,0,0,.12)")};}):[];
+      var selectedColorName=hasColors?(hasColorImages?curP.colors[colorIdx][0]:curP.colors[0][0]):"";
+      var colorPhotos=hasColorImages?[colorSource.colorImages[colorIdx]].concat((colorSource.colorGallery&&colorSource.colorGallery[colorIdx])||[]):[];
+      var colorDots=[];
+      var nextColorImage=function(){};
+      if(hasColorImages&&colorPhotos.length>1){
+        colorDots=colorPhotos.map(function(p,i){var active=i===gi;return {onClick:function(){self.setImg(i);},style:active?"width:8px;height:8px;border-radius:50%;background:#1d1d1f;border:none;padding:0;cursor:pointer":"width:8px;height:8px;border-radius:50%;background:#c7c7cc;border:none;padding:0;cursor:pointer"};});
+        nextColorImage=function(){var n=(gi+1)%colorPhotos.length;self.setImg(n);};
+      }
+      var modelCards=hasSizes?curP.sizes.map(function(s){
+        var active=s.key===activeSize.key;
+        return {name:s.name,sizeLabel:"Tela de "+(s.inches||"")+" polegadas",onClick:function(){self.setSize(s.key);},
+          boxStyle:active?"display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border-radius:14px;border:2px solid #0a90dd;background:#fff;cursor:pointer;text-align:left":"display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border-radius:14px;border:1px solid rgba(0,0,0,.14);background:#fff;cursor:pointer;text-align:left"};
+      }):[];
+      var storageSource=(activeSize&&activeSize.storageOptions)?activeSize.storageOptions:((!activeSize&&curP.storageOptions)?curP.storageOptions:null);
+      var hasStorage=false,storageOptions=[],selectedStorage=null;
+      if(storageSource){
+        hasStorage=true;
+        var stKey=this.state.storageKey||storageSource[0].key;
+        selectedStorage=storageSource.filter(function(o){return o.key===stKey;})[0]||storageSource[0];
+        storageOptions=storageSource.map(function(o){var active=o.key===selectedStorage.key;return {key:o.key,label:o.label,onClick:function(){self.setState({storageKey:o.key});},buttonStyle:active?"padding:10px 18px;border-radius:11px;border:none;background:#fff;color:#1d1d1f;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.12)":"padding:10px 18px;border-radius:11px;border:none;background:transparent;color:#6e6e73;font-size:14px;font-weight:500;cursor:pointer"};});
+      }
+      var navDots=[],navNext=function(){},hasNav=false;
+      if(hasColorImages){
+        navDots=colorDots; navNext=nextColorImage; hasNav=colorPhotos.length>1;
+      } else if(effGallery.length>1){
+        navDots=effGallery.map(function(g,i){var active=i===gi;return {onClick:function(){self.setImg(i);},style:active?"width:8px;height:8px;border-radius:50%;background:#1d1d1f;border:none;padding:0;cursor:pointer":"width:8px;height:8px;border-radius:50%;background:#c7c7cc;border:none;padding:0;cursor:pointer"};});
+        navNext=function(){var n=(gi+1)%effGallery.length;self.setImg(n);};
+        hasNav=true;
+      }
+      var features=curP.features.map(function(f,i){return {num:i+1,title:f[0],desc:f[1]};});
+      var specs=effSpecsRaw.map(function(s){return {label:s[0],value:s[1]};});
+      var rel=PRODUCTS.filter(function(x){return x.cat===curP.cat&&x.id!==curP.id;}).concat(PRODUCTS.filter(function(x){return x.cat!==curP.cat;})).slice(0,5);
+      var related=rel.map(function(r){return {name:r.name,img:A(r.img),onClick:function(){self.openProduct(r.id);}};});
+      var sizeOptions=hasSizes?curP.sizes.map(function(s){var active=s.key===activeSize.key;return {key:s.key,label:s.label,onClick:function(){self.setSize(s.key);},buttonStyle:active?"padding:10px 20px;border-radius:11px;border:none;background:#fff;color:#1d1d1f;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.12)":"padding:10px 20px;border-radius:11px;border:none;background:transparent;color:#6e6e73;font-size:14px;font-weight:500;cursor:pointer"};}):[];
+
+      vals.curP={catLabel:curP.catLabel,kicker:curP.kicker,name:effName,tagline:effTagline,blurb:curP.blurb,icon:curP.icon?A(curP.icon):null};
+      vals.mainImg=hasColorImages?A(colorPhotos[gi%colorPhotos.length]||colorPhotos[0]):A(effGallery[gi]||effGallery[0]);
+      vals.hasThumbs=effGallery.length>1;
+      vals.hasColorImages=hasColorImages;
+      vals.navDots=navDots;
+      vals.navNext=navNext;
+      vals.hasNav=hasNav;
+      vals.modelCards=modelCards;
+      vals.gallery=gallery;
+      vals.hasColors=hasColors;
+      vals.colors=colors;
+      vals.features=features;
+      vals.hasHighlights=highlights.length>0;
+      vals.highlights=highlights;
+      vals.specs=specs;
+      vals.related=related;
+      vals.hasSizes=hasSizes;
+      vals.sizeOptions=sizeOptions;
+      vals.hasStorage=hasStorage;
+      vals.storageOptions=storageOptions;
+      vals.selectedColorName=selectedColorName;
+      vals.selectedStorageLabel=selectedStorage?selectedStorage.label:"";
+      var buyExtra=(hasStorage&&selectedColorName)?(" ("+selectedStorage.label+", "+selectedColorName+")"):(hasStorage?(" ("+selectedStorage.label+")"):(selectedColorName?(" ("+selectedColorName+")"):""));
+      vals.waBuy=waLink(waNumber,"Olá! Quero comprar o "+effName+buyExtra+" na LOA* Select. Pode me passar valor e disponibilidade?");
+      vals.waAsk=waLink(waNumber,"Olá! Tenho dúvidas sobre o "+effName+" da LOA* Select. Pode me ajudar?");
+      vals.scrollRelatedLeft=function(){self.scrollRow("row-related",-1);};
+      vals.scrollRelatedRight=function(){self.scrollRow("row-related",1);};
+    }
+    return vals;
+  }
+}
+</script>
+</body>
+</html>
