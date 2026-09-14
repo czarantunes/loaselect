@@ -72,11 +72,14 @@
   @media(max-width:833px){
     .hdr-nav{display:none !important}
     .hdr-toggle{display:inline-flex !important}
-    .hdr-row{justify-content:flex-end !important}
+    .hdr-row{justify-content:flex-end !important;height:72px !important}
     .hdr-logo{position:absolute !important;left:50% !important;top:50% !important;transform:translate(-50%,-50%) !important}
+    .hdr-logo img{height:46px !important}
     .hdr-icons-main{display:none !important}
-    .hdr-icons-mobile{display:flex !important;align-items:center;justify-content:center;gap:8px;padding:8px 22px 12px;border-top:1px solid var(--border)}
-    .page-shell{padding-top:150px !important}
+    .hdr-icons-mobile{display:flex !important;align-items:center;justify-content:center;gap:2px;padding:5px 22px 8px;border-top:1px solid var(--border)}
+    .hdr-icons-mobile a,.hdr-icons-mobile button{width:36px !important;height:36px !important}
+    .hdr-icons-mobile svg{width:17px !important;height:17px !important}
+    .page-shell{padding-top:118px !important}
     .cat-grid{display:flex !important;flex-wrap:nowrap !important;overflow-x:auto !important;scroll-snap-type:x mandatory;padding:4px 2px 10px !important}
     .cat-grid>button{flex:0 0 auto !important;width:68vw !important;max-width:290px !important;scroll-snap-align:start}
     .hero-grid{grid-template-columns:1fr !important;gap:10px !important}
@@ -800,10 +803,10 @@ function renderHeader(waGeneral,instaUrl){
       '<button class="hdr-toggle" data-act="toggleMenu" aria-label="Menu" aria-expanded="'+(state.menuOpen?'true':'false')+'" aria-controls="mobile-menu" style="display:none;align-items:center;justify-content:center;width:44px;height:44px;border:none;background:none;color:var(--text);cursor:pointer;border-radius:50%"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>'+
     '</div>'+
     '<div class="hdr-icons-mobile" style="display:none">'+
-      '<a href="'+waGeneral+'" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:#0a90dd">'+WA_ICON+'</a>'+
-      '<a href="'+instaUrl+'" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:#0a90dd"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg></a>'+
-      '<button data-act="toggleCart" aria-label="Carrinho" style="position:relative;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:none;background:none;color:var(--text);cursor:pointer;border-radius:50%">'+CART_ICON+(cart.length?('<span style="position:absolute;top:4px;right:4px;min-width:16px;height:16px;padding:0 3px;border-radius:8px;background:#0a90dd;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1">'+cart.length+'</span>'):'')+'</button>'+
-      '<button data-act="toggleDark" aria-label="Alternar modo escuro" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:none;background:none;color:var(--text);cursor:pointer;border-radius:50%">'+(isDarkOn()?SUN_ICON:MOON_ICON)+'</button>'+
+      '<a href="'+waGeneral+'" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;color:#0a90dd">'+WA_ICON+'</a>'+
+      '<a href="'+instaUrl+'" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;color:#0a90dd"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg></a>'+
+      '<button data-act="toggleCart" aria-label="Carrinho" style="position:relative;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;color:var(--text);cursor:pointer;border-radius:50%">'+CART_ICON+(cart.length?('<span style="position:absolute;top:2px;right:2px;min-width:16px;height:16px;padding:0 3px;border-radius:8px;background:#0a90dd;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1">'+cart.length+'</span>'):'')+'</button>'+
+      '<button data-act="toggleDark" aria-label="Alternar modo escuro" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;color:var(--text);cursor:pointer;border-radius:50%">'+(isDarkOn()?SUN_ICON:MOON_ICON)+'</button>'+
     '</div>'+
     (state.menuOpen?('<div id="mobile-menu" style="border-top:1px solid var(--border);background:var(--menu-bg);padding:6px 22px 14px"><a href="#" data-act="goLoja" style="display:block;padding:15px 4px;font-size:18px;font-weight:500;color:var(--text);border-bottom:1px solid var(--border)">Loja</a>'+mobileLinks+'</div>'):'')+
   '</header>';
