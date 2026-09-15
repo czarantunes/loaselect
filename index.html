@@ -72,8 +72,7 @@
   @media(max-width:833px){
     .hdr-nav{display:none !important}
     .hdr-toggle{display:inline-flex !important}
-    .hdr-row{justify-content:flex-end !important;height:72px !important}
-    .hdr-logo{position:absolute !important;left:50% !important;top:50% !important;transform:translate(-50%,-50%) !important}
+    .hdr-row{justify-content:space-between !important;height:72px !important}
     .hdr-logo img{height:46px !important}
     .hdr-icons-main{display:none !important}
     .hdr-icons-mobile{display:flex !important;align-items:center;justify-content:center;gap:2px;padding:5px 22px 8px;border-top:1px solid var(--border)}
@@ -828,7 +827,7 @@ function renderHome(waGeneral){
   return '<main id="main">'+
     '<section style="max-width:1180px;margin:0 auto;padding:clamp(52px,8vw,104px) 22px clamp(30px,5vw,60px)"><div class="hero-grid" style="display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(20px,5vw,64px);align-items:center">'+
       '<div><h1 style="font-size:clamp(38px,6.2vw,76px);line-height:1.03;letter-spacing:-.035em;font-weight:600;margin:0">Produtos Apple.<br /><span class="loa-grad">Curadoria exclusiva.</span></h1>'+
-      '<p style="font-size:clamp(17px,2vw,22px);line-height:1.5;color:var(--text);font-weight:500;max-width:500px;margin:22px 0 0">iPhone, MacBook, iPad, AirPods e Apple Watch com compra 100% segura e entrega garantida em todo o Brasil.</p>'+
+      '<p style="font-size:clamp(17px,2vw,22px);line-height:1.5;color:var(--text);font-weight:500;max-width:500px;margin:22px 0 0">iPhone, MacBook, iPad, AirPods e Apple Watch com compra <span style="font-size:1em;font-variant-numeric:normal;font-feature-settings:normal">100%</span> segura e entrega garantida em todo o Brasil.</p>'+
       '<p style="font-size:14px;color:var(--text-2);margin:14px 0 0">🇧🇷 Envio nacional &nbsp;•&nbsp; Atendimento rápido no WhatsApp &nbsp;•&nbsp; Pagamento facilitado</p>'+
       '<div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px"><a href="#" data-act="goLoja" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25cdf8 0%,#0a90dd 52%,#0567bb 100%);color:#fff;font-size:16px;font-weight:500;padding:14px 28px;border-radius:980px;box-shadow:0 8px 22px rgba(10,144,221,.3);min-height:48px">Explorar produtos <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>'+
       '<a href="'+waGeneral+'" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;color:#0a90dd;font-size:16px;font-weight:500;padding:14px 6px">Falar no WhatsApp <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></a></div></div>'+
